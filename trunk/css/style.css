@@ -1,0 +1,45 @@
+.classname {
+    -moz-box-shadow:inset 0px 1px 0px -50px #97c4fe;
+    -webkit-box-shadow:inset 0px 1px 0px -50px #97c4fe;
+    box-shadow:inset 0px 1px 0px -50px #97c4fe;
+    background-color:#3d94f6;
+    -webkit-border-top-left-radius:0px;
+    -moz-border-radius-topleft:0px;
+    border-top-left-radius:0px;
+    -webkit-border-top-right-radius:0px;
+    -moz-border-radius-topright:0px;
+    border-top-right-radius:0px;
+    -webkit-border-bottom-right-radius:0px;
+    -moz-border-radius-bottomright:0px;
+    border-bottom-right-radius:0px;
+    -webkit-border-bottom-left-radius:0px;
+    -moz-border-radius-bottomleft:0px;
+    border-bottom-left-radius:0px;
+    text-indent:-2px;
+    display:inline-block;
+    color:#ffffff;
+    font-family:Times New Roman;
+
+    font-size:130px;
+    font-weight:bold;
+    font-style:normal;
+    height:250px;
+    line-height:53px;
+    width: 500px;
+    margin-bottom: 5px;
+    text-decoration:none;
+    text-align:center;
+    text-shadow:1px 0px 0px #489ff7;
+    margin-left: 30%;
+}
+.classname a{
+    margin-top: 1000px;
+
+}
+.classname:hover {
+     background-color:#226de6;
+ }.classname:active {
+      position:relative;
+      top:1px;
+  }
+  .tientri{margin: 20px 0px 0px 35%}
