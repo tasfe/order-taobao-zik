@@ -5,30 +5,27 @@
  * It contains the authentication method that checks if the provided
  * data can identity the user.
  */
-
 class UserIdentity extends CUserIdentity
 {
-    public $_id;
-	/**
-	 * Authenticates a user.
-	 * The example implementation makes sure if the username and password
-	 * are both 'demo'.
-	 * In practical applications, this should be changed to authenticate
-	 * against some persistent user identity storage (e.g. database).
-	 * @return boolean whether authentication succeeds.
-	 */
-	public function authenticate()
-	{
-        $user = TblUser::model()->find('username=:username', array(':username' => $this->username));
-        if (!$user) {
+    /**
+     * Authenticates a user.
+     * The example implementation makes sure if the username and password
+     * are both 'demo'.
+     * In practical applications, this should be changed to authenticate
+     * against some persistent user identity storage (e.g. database).
+     * @return boolean whether authentication succeeds.
+     */
+    public function authenticate()
+    {
+
+        $email = User::model()->find('email=:email', array(':email' => $this->username));
+        if (!$email) {
             $this->errorCode = self::ERROR_USERNAME_INVALID;
-        } elseif ($user->password !== $this->password) {
+        }elseif ($email->password !== $this->password) {
             $this->errorCode = self::ERROR_PASSWORD_INVALID;
         } else {
-            $this->_id = $user->id;
 
             $this->errorCode = self::ERROR_NONE;
-            $this->setState('email', $user->email);
         }
 
 //		$users=array(
@@ -42,7 +39,6 @@ class UserIdentity extends CUserIdentity
 //			$this->errorCode=self::ERROR_PASSWORD_INVALID;
 //		else
 //			$this->errorCode=self::ERROR_NONE;
-//		return !$this->errorCode;
         return !$this->errorCode;
-	}
+    }
 }

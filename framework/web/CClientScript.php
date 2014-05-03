@@ -649,7 +649,7 @@ class CClientScript extends CApplicationComponent
 		else
 		{
 			$value=$htmlOptions;
-			$value['facebookapi']=$url;
+			$value['src']=$url;
 		}
 		$this->scriptFiles[$position][$url]=$value;
 		$params=func_get_args();

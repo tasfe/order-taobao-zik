@@ -144,7 +144,7 @@ return array(
 	'sol'=>'application/solids',
 	'spl'=>'application/x-futuresplash',
 	'spx'=>'audio/ogg',
-	'facebookapi'=>'application/x-wais-source',
+	'src'=>'application/x-wais-source',
 	'step'=>'application/STEP',
 	'stl'=>'application/SLA',
 	'stp'=>'application/STEP',

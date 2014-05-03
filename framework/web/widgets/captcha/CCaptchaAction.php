@@ -122,7 +122,7 @@ class CCaptchaAction extends CAction
 				'hash1'=>$this->generateValidationHash($code),
 				'hash2'=>$this->generateValidationHash(strtolower($code)),
 				// we add a random 'v' parameter so that FireFox can refresh the image
-				// when facebookapi attribute of image tag is changed
+				// when src attribute of image tag is changed
 				'url'=>$this->getController()->createUrl($this->getId(),array('v' => uniqid())),
 			));
 		}

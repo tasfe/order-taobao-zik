@@ -40,7 +40,7 @@ class CFileHelper
 	 * <li>exclude: array, list of directory and file exclusions. Each exclusion can be either a name or a path.
 	 * If a file or directory name or path matches the exclusion, it will not be copied. For example, an exclusion of
 	 * '.svn' will exclude all files and directories whose name is '.svn'. And an exclusion of '/a/b' will exclude
-	 * file or directory '$facebookapi/a/b'. Note, that '/' should be used as separator regardless of the value of the DIRECTORY_SEPARATOR constant.
+	 * file or directory '$src/a/b'. Note, that '/' should be used as separator regardless of the value of the DIRECTORY_SEPARATOR constant.
 	 * </li>
 	 * <li>level: integer, recursion depth, default=-1.
 	 * Level -1 means copying all directories and files under the directory;
@@ -93,7 +93,7 @@ class CFileHelper
 	 * <li>exclude: array, list of directory and file exclusions. Each exclusion can be either a name or a path.
 	 * If a file or directory name or path matches the exclusion, it will not be copied. For example, an exclusion of
 	 * '.svn' will exclude all files and directories whose name is '.svn'. And an exclusion of '/a/b' will exclude
-	 * file or directory '$facebookapi/a/b'. Note, that '/' should be used as separator regardless of the value of the DIRECTORY_SEPARATOR constant.
+	 * file or directory '$src/a/b'. Note, that '/' should be used as separator regardless of the value of the DIRECTORY_SEPARATOR constant.
 	 * </li>
 	 * <li>level: integer, recursion depth, default=-1.
 	 * Level -1 means searching for all directories and files under the directory;
@@ -124,7 +124,7 @@ class CFileHelper
 	 * @param array $exclude list of directory and file exclusions. Each exclusion can be either a name or a path.
 	 * If a file or directory name or path matches the exclusion, it will not be copied. For example, an exclusion of
 	 * '.svn' will exclude all files and directories whose name is '.svn'. And an exclusion of '/a/b' will exclude
-	 * file or directory '$facebookapi/a/b'. Note, that '/' should be used as separator regardless of the value of the DIRECTORY_SEPARATOR constant.
+	 * file or directory '$src/a/b'. Note, that '/' should be used as separator regardless of the value of the DIRECTORY_SEPARATOR constant.
 	 * @param integer $level recursion depth. It defaults to -1.
 	 * Level -1 means copying all directories and files under the directory;
 	 * Level 0 means copying only the files DIRECTLY under the directory;
@@ -169,7 +169,7 @@ class CFileHelper
 	 * @param array $exclude list of directory and file exclusions. Each exclusion can be either a name or a path.
 	 * If a file or directory name or path matches the exclusion, it will not be copied. For example, an exclusion of
 	 * '.svn' will exclude all files and directories whose name is '.svn'. And an exclusion of '/a/b' will exclude
-	 * file or directory '$facebookapi/a/b'. Note, that '/' should be used as separator regardless of the value of the DIRECTORY_SEPARATOR constant.
+	 * file or directory '$src/a/b'. Note, that '/' should be used as separator regardless of the value of the DIRECTORY_SEPARATOR constant.
 	 * @param integer $level recursion depth. It defaults to -1.
 	 * Level -1 means searching for all directories and files under the directory;
 	 * Level 0 means searching for only the files DIRECTLY under the directory;
@@ -207,7 +207,7 @@ class CFileHelper
 	 * @param array $exclude list of directory and file exclusions. Each exclusion can be either a name or a path.
 	 * If a file or directory name or path matches the exclusion, false will be returned. For example, an exclusion of
 	 * '.svn' will return false for all files and directories whose name is '.svn'. And an exclusion of '/a/b' will return false for
-	 * file or directory '$facebookapi/a/b'. Note, that '/' should be used as separator regardless of the value of the DIRECTORY_SEPARATOR constant.
+	 * file or directory '$src/a/b'. Note, that '/' should be used as separator regardless of the value of the DIRECTORY_SEPARATOR constant.
 	 * @return boolean whether the file or directory is valid
 	 */
 	protected static function validatePath($base,$file,$isFile,$fileTypes,$exclude)
