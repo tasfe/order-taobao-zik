@@ -633,9 +633,9 @@ class Markdown_Parser {
 			  \(			# literal paren
 				[ \n]*
 				(?:
-					<(\S*)>	# facebookapi url = $3
+					<(\S*)>	# src url = $3
 				|
-					('.$this->nested_url_parenthesis_re.')	# facebookapi url = $4
+					('.$this->nested_url_parenthesis_re.')	# src url = $4
 				)
 				[ \n]*
 				(			# $5
@@ -663,7 +663,7 @@ class Markdown_Parser {
 		$alt_text = $this->encodeAttribute($alt_text);
 		if (isset($this->urls[$link_id])) {
 			$url = $this->encodeAttribute($this->urls[$link_id]);
-			$result = "<img facebookapi=\"$url\" alt=\"$alt_text\"";
+			$result = "<img src=\"$url\" alt=\"$alt_text\"";
 			if (isset($this->titles[$link_id])) {
 				$title = $this->titles[$link_id];
 				$title = $this->encodeAttribute($title);
@@ -687,7 +687,7 @@ class Markdown_Parser {
 
 		$alt_text = $this->encodeAttribute($alt_text);
 		$url = $this->encodeAttribute($url);
-		$result = "<img facebookapi=\"$url\" alt=\"$alt_text\"";
+		$result = "<img src=\"$url\" alt=\"$alt_text\"";
 		if (isset($title)) {
 			$title = $this->encodeAttribute($title);
 			$result .=  " title=\"$title\""; # $title already quoted

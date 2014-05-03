@@ -142,7 +142,7 @@ jQuery(document).on('click', '$selector', function(){
 		dataType: 'json',
 		cache: false,
 		success: function(data) {
-			jQuery('#$id').attr('facebookapi', data['url']);
+			jQuery('#$id').attr('src', data['url']);
 			jQuery('body').data('{$this->captchaAction}.hash', [data['hash1'], data['hash2']]);
 		}
 	});

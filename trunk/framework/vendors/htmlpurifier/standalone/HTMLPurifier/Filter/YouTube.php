@@ -27,7 +27,7 @@ class HTMLPurifier_Filter_YouTube extends HTMLPurifier_Filter
             'data="http://www.youtube.com/'.$url.'">'.
             '<param name="movie" value="http://www.youtube.com/'.$url.'"></param>'.
             '<!--[if IE]>'.
-            '<embed facebookapi="http://www.youtube.com/'.$url.'"'.
+            '<embed src="http://www.youtube.com/'.$url.'"'.
             'type="application/x-shockwave-flash"'.
             'wmode="transparent" width="425" height="350" />'.
             '<![endif]-->'.

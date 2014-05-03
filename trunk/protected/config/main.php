@@ -6,8 +6,13 @@
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
 return array(
+    'behaviors'=>array(
+        'runEnd'=>array(
+            'class'=>'application.components.WebApplicationEndBehavior',
+        ),
+    ),
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
+	'name'=>'Orders TaoBao - Alibaba...',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -25,7 +30,7 @@ return array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'1',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
-//			'ipFilters'=>array('mobay.vn','::1'),
+			'ipFilters'=>array('127.0.0.1','::1'),
 		),
 
 	),
@@ -37,28 +42,26 @@ return array(
 			'allowAutoLogin'=>true,
 		),
 		// uncomment the following to enable URLs in path-format
-
+		/*
 		'urlManager'=>array(
 			'urlFormat'=>'path',
-            'showScriptName' => false,
 			'rules'=>array(
-//                'home'=>'site/index',
-                'gioi-thieu.html'=>'site/page',
-                '<controller:\w+>/<id:\d+>'=>'<controller>/view',
-//				'<controller:\w+>/<view:\w+>'=>'<controller>/page',
-                '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-                '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
+				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
-
-
+		*/
+//		'db'=>array(
+//			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
+//		),
 		// uncomment the following to use a MySQL database
 
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=fb_app',
+			'connectionString' => 'mysql:host=localhost;dbname=orders',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => 'mobay2014',
+			'password' => '',
 			'charset' => 'utf8',
 		),
 

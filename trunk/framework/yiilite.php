@@ -4801,7 +4801,7 @@ class CHtml
 	{
 		$defaultHtmlOptions=array(
 			'type'=>'text/javascript',
-			'facebookapi'=>$url
+			'src'=>$url
 		);
 		$htmlOptions=array_merge($defaultHtmlOptions,$htmlOptions);
 		return self::tag('script',$htmlOptions,'');
@@ -4861,7 +4861,7 @@ class CHtml
 	}
 	public static function image($src,$alt='',$htmlOptions=array())
 	{
-		$htmlOptions['facebookapi']=$src;
+		$htmlOptions['src']=$src;
 		$htmlOptions['alt']=$alt;
 		return self::tag('img',$htmlOptions);
 	}
@@ -4900,7 +4900,7 @@ class CHtml
 	}
 	public static function imageButton($src,$htmlOptions=array())
 	{
-		$htmlOptions['facebookapi']=$src;
+		$htmlOptions['src']=$src;
 		$htmlOptions['type']='image';
 		return self::button('submit',$htmlOptions);
 	}
@@ -6423,7 +6423,7 @@ class CClientScript extends CApplicationComponent
 		else
 		{
 			$value=$htmlOptions;
-			$value['facebookapi']=$url;
+			$value['src']=$url;
 		}
 		$this->scriptFiles[$position][$url]=$value;
 		$params=func_get_args();

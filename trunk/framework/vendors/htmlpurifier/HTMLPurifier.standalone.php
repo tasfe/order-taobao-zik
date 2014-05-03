@@ -10883,7 +10883,7 @@ class HTMLPurifier_AttrTransform_EnumToCSS extends HTMLPurifier_AttrTransform {
 // must be called POST validation
 
 /**
- * Transform that supplies default values for the facebookapi and alt attributes
+ * Transform that supplies default values for the src and alt attributes
  * in img tags, as well as prevents the img tag from being removed
  * because of a missing alt tag. This needs to be registered as both
  * a pre and post attribute transform.
@@ -10894,9 +10894,9 @@ class HTMLPurifier_AttrTransform_ImgRequired extends HTMLPurifier_AttrTransform
     public function transform($attr, $config, $context) {
 
         $src = true;
-        if (!isset($attr['facebookapi'])) {
+        if (!isset($attr['src'])) {
             if ($config->get('Core.RemoveInvalidImg')) return $attr;
-            $attr['facebookapi'] = $config->get('Attr.DefaultInvalidImage');
+            $attr['src'] = $config->get('Attr.DefaultInvalidImage');
             $src = false;
         }
 
@@ -10905,7 +10905,7 @@ class HTMLPurifier_AttrTransform_ImgRequired extends HTMLPurifier_AttrTransform
                 $alt = $config->get('Attr.DefaultImageAlt');
                 if ($alt === null) {
                     // truncate if the alt is too long
-                    $attr['alt'] = substr(basename($attr['facebookapi']),0,40);
+                    $attr['alt'] = substr(basename($attr['src']),0,40);
                 } else {
                     $attr['alt'] = $alt;
                 }
@@ -10995,8 +10995,8 @@ class HTMLPurifier_AttrTransform_Input extends HTMLPurifier_AttrTransform {
             if ($result === false) unset($attr['size']);
             else $attr['size'] = $result;
         }
-        if (isset($attr['facebookapi']) && $t !== 'image') {
-            unset($attr['facebookapi']);
+        if (isset($attr['src']) && $t !== 'image') {
+            unset($attr['src']);
         }
         if (!isset($attr['value']) && ($t === 'radio' || $t === 'checkbox')) {
             $attr['value'] = '';
@@ -11241,7 +11241,7 @@ class HTMLPurifier_AttrTransform_SafeParam extends HTMLPurifier_AttrTransform
                 $attr['value'] = $this->wmode->validate($attr['value'], $config, $context);
                 break;
             case 'movie':
-            case 'facebookapi':
+            case 'src':
                 $attr['name'] = "movie";
                 $attr['value'] = $this->uri->validate($attr['value'], $config, $context);
                 break;
@@ -12599,7 +12599,7 @@ class HTMLPurifier_HTMLModule_Forms extends HTMLPurifier_HTMLModule
             'name' => 'CDATA',
             'readonly' => 'Bool#readonly',
             'size' => 'Number',
-            'facebookapi' => 'URI#embedded',
+            'src' => 'URI#embedded',
             'tabindex' => 'Number',
             'type' => 'Enum#text,password,checkbox,button,radio,submit,reset,file,hidden,image',
             'value' => 'CDATA',
@@ -12736,7 +12736,7 @@ class HTMLPurifier_HTMLModule_Iframe extends HTMLPurifier_HTMLModule
         $this->addElement(
             'iframe', 'Inline', 'Flow', 'Common',
             array(
-                'facebookapi' => 'URI#embedded',
+                'src' => 'URI#embedded',
                 'width' => 'Length',
                 'height' => 'Length',
                 'name' => 'ID',
@@ -12776,7 +12776,7 @@ class HTMLPurifier_HTMLModule_Image extends HTMLPurifier_HTMLModule
                 'height' => 'Pixels#' . $max,
                 'width'  => 'Pixels#' . $max,
                 'longdesc' => 'URI',
-                'facebookapi*' => new HTMLPurifier_AttrDef_URI(true), // embedded
+                'src*' => new HTMLPurifier_AttrDef_URI(true), // embedded
             )
         );
         if ($max === null || $config->get('HTML.Trusted')) {
@@ -13218,7 +13218,7 @@ class HTMLPurifier_HTMLModule_SafeEmbed extends HTMLPurifier_HTMLModule
         $embed = $this->addElement(
             'embed', 'Inline', 'Empty', 'Common',
             array(
-                'facebookapi*' => 'URI#embedded',
+                'src*' => 'URI#embedded',
                 'type' => 'Enum#application/x-shockwave-flash',
                 'width' => 'Pixels#' . $max,
                 'height' => 'Pixels#' . $max,
@@ -13316,7 +13316,7 @@ class HTMLPurifier_HTMLModule_SafeScripting extends HTMLPurifier_HTMLModule
                 // While technically not required by the spec, we're forcing
                 // it to this value.
                 'type' => 'Enum#text/javascript',
-                'facebookapi*'  => new HTMLPurifier_AttrDef_Enum(array_keys($allowed))
+                'src*'  => new HTMLPurifier_AttrDef_Enum(array_keys($allowed))
             )
         );
         $script->attr_transform_pre[] =
@@ -13370,7 +13370,7 @@ class HTMLPurifier_HTMLModule_Scripting extends HTMLPurifier_HTMLModule
         $this->info['script'] = new HTMLPurifier_ElementDef();
         $this->info['script']->attr = array(
             'defer' => new HTMLPurifier_AttrDef_Enum(array('defer')),
-            'facebookapi'   => new HTMLPurifier_AttrDef_URI(true),
+            'src'   => new HTMLPurifier_AttrDef_URI(true),
             'type'  => new HTMLPurifier_AttrDef_Enum(array('text/javascript'))
         );
         $this->info['script']->content_model = '#PCDATA';
@@ -14684,7 +14684,7 @@ class HTMLPurifier_Injector_SafeObject extends HTMLPurifier_Injector
         'wmode' => true,
         'movie' => true,
         'flashvars' => true,
-        'facebookapi' => true,
+        'src' => true,
         'allowFullScreen' => true, // if omitted, assume to be 'false'
     );
 
@@ -14714,7 +14714,7 @@ class HTMLPurifier_Injector_SafeObject extends HTMLPurifier_Injector
                 // attribute, which we need if a type is specified. This is
                 // *very* Flash specific.
                 if (!isset($this->objectStack[$i]->attr['data']) &&
-                    ($token->attr['name'] == 'movie' || $token->attr['name'] == 'facebookapi')) {
+                    ($token->attr['name'] == 'movie' || $token->attr['name'] == 'src')) {
                     $this->objectStack[$i]->attr['data'] = $token->attr['value'];
                 }
                 // Check if the parameter is the correct value but has not
@@ -17321,7 +17321,7 @@ class HTMLPurifier_URIScheme_data extends HTMLPurifier_URIScheme {
 class HTMLPurifier_URIScheme_file extends HTMLPurifier_URIScheme {
 
     // Generally file:// URLs are not accessible from most
-    // machines, so placing them as an img facebookapi is incorrect.
+    // machines, so placing them as an img src is incorrect.
     public $browsable = false;
 
     // Basically the *only* URI scheme for which this is true, since
