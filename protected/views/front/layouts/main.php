@@ -18,6 +18,7 @@
 
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css"/>
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/custom.css"/>
 
     <title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
@@ -92,15 +93,6 @@
             'items' => array(
                 array('label' => 'Đăng nhập', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
                 array('label' => 'Đăng xuất (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest),
-                array(
-                    'class' => 'bootstrap.widgets.TbButton',
-                    'label' => 'Click me',
-                    'type' => 'primary',
-                    'htmlOptions' => array(
-                        'data-toggle' => 'modal',
-                        'data-target' => '#myModal',
-                    ),
-                )
             ),
 
 
@@ -109,34 +101,9 @@
     ),
 )); ?>
 
-<?php $this->beginWidget('bootstrap.widgets.TbModal', array('id'=>'myModal')); ?>
 
-<div class="modal-header">
-    <a class="close" data-dismiss="modal">&times;</a>
-    <h4>Modal header</h4>
-</div>
-
-<div class="modal-body">
-    <p>One fine body...</p>
-</div>
-
-<div class="modal-footer">
-    <?php $this->widget('bootstrap.widgets.TbButton', array(
-        'type'=>'primary',
-        'label'=>'Save changes',
-        'url'=>'#',
-        'htmlOptions'=>array('data-dismiss'=>'modal'),
-    )); ?>
-    <?php $this->widget('bootstrap.widgets.TbButton', array(
-        'label'=>'Close',
-        'url'=>'#',
-        'htmlOptions'=>array('data-dismiss'=>'modal'),
-    )); ?>
-</div>
-
-<?php $this->endWidget(); ?>
-
+<div class="container-fluid">
 <?php echo $content; ?>
-
+</div>
 </body>
 </html>

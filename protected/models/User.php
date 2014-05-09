@@ -10,6 +10,7 @@
  * @property string $name
  * @property string $reg_at
  * @property integer $status
+ * @property integer $user_key
  */
 class User extends CActiveRecord
 {

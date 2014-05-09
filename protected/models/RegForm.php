@@ -1,105 +1,73 @@
 <?php
 
 /**
- * This is the model class for table "tbl_user".
- *
- * The followings are the available columns in table 'tbl_user':
- * @property integer $id
- * @property string $username
- * @property string $password
- * @property string $email
+ * LoginForm class.
+ * LoginForm is the data structure for keeping
+ * user login form data. It is used by the 'login' action of 'SiteController'.
  */
-class RegForm extends CActiveRecord
+class RegForm extends CFormModel
 {
-	/**
-	 * @return string the associated database table name
-	 */
-	public function tableName()
-	{
-		return 'tbl_user';
-	}
-
-	/**
-	 * @return array validation rules for model attributes.
-	 */
-	public function rules()
-	{
-		// NOTE: you should only define rules for those attributes that
-		// will receive user inputs.
-		return array(
-			array('username, password, email', 'required'),
-			// The following rule is used by search().
-			// @todo Please remove those attributes that should not be searched.
-			array('id, username, password, email', 'safe', 'on'=>'search'),
-		);
-	}
-
-	/**
-	 * @return array relational rules.
-	 */
-	public function relations()
-	{
-		// NOTE: you may need to adjust the relation name and the related
-		// class name for the relations automatically generated below.
-		return array(
-		);
-	}
-
-	/**
-	 * @return array customized attribute labels (name=>label)
-	 */
-	public function attributeLabels()
-	{
-		return array(
-			'id' => 'ID',
-			'username' => 'Username',
-			'password' => 'Password',
-			'email' => 'Email',
-		);
-	}
-
-	/**
-	 * Retrieves a list of models based on the current search/filter conditions.
-	 *
-	 * Typical usecase:
-	 * - Initialize the model fields with values from filter form.
-	 * - Execute this method to get CActiveDataProvider instance which will filter
-	 * models according to data in model fields.
-	 * - Pass data provider to CGridView, CListView or any similar widget.
-	 *
-	 * @return CActiveDataProvider the data provider that can return the models
-	 * based on the search/filter conditions.
-	 */
-	public function search()
-	{
-		// @todo Please modify the following code to remove attributes that should not be searched.
-
-		$criteria=new CDbCriteria;
-
-		$criteria->compare('id',$this->id);
-		$criteria->compare('username',$this->username,true);
-		$criteria->compare('password',$this->password,true);
-		$criteria->compare('email',$this->email,true);
-
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		));
-	}
-
-	/**
-	 * Returns the static model of the specified AR class.
-	 * Please note that you should have this exact method in all your CActiveRecord descendants!
-	 * @param string $className active record class name.
-	 * @return RegForm the static model class
-	 */
-	public static function model($className=__CLASS__)
-	{
-		return parent::model($className);
-	}
-
-    public function register(){
+    public $email;
+    public $password;
+    public $name;
+    public $reg_at;
+    public $status;
+    public $user_key;
 
 
+
+    public $address;
+    public $phone;
+    public $cmt;
+    public $city;
+    public $yahoo;
+    public $skype;
+    public $acc_bank;
+    public $name_bank;
+    public $facebook_link;
+    public $website;
+    public $dob;
+    public $user_info_key;
+
+
+    /**
+     * Declares the validation rules.
+     * The rules state that username and password are required,
+     * and password needs to be authenticated.
+     */
+    public function rules()
+    {
+        return array(
+            // username and password are required
+            array('email, password,name,address,phone,cmt,city,acc_bank,name_bank', 'required' ,'message'=>' {attribute} Không được bỏ trống'),
+            array('facebook_link,website,dob','length', 'max'=>500),
+            array('skype,yahoo','length', 'max'=>500),
+            array('reg_at,status,user_key','length', 'max'=>50),
+        );
+    }
+
+    /**
+     * Declares attribute labels.
+     */
+    public function attributeLabels()
+    {
+        return array(
+
+            'email' => 'Email',
+            'password' => 'Mật khẩu',
+            'name' => 'Họ và Tên',
+            'address' => 'Địa Chỉ',
+            'phone' => 'Số ĐT',
+            'city' => 'Tỉnh',
+            'cmt' => 'Số CMT',
+            'yahoo' => 'Yahoo',
+            'skype' => 'Skype',
+            'acc_bank' => 'Số tài khoản ngân hàng',
+            'name_bank' => 'Tên và chi nhánh Ngân Hàng',
+            'facebook_link' => 'Địa Chỉ Facebook',
+            'website' => 'Website',
+            'dob' => 'Ngày Sinh',
+        );
     }
 
 }
