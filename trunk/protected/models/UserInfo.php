@@ -16,6 +16,7 @@
  * @property string $facebook_link
  * @property string $website
  * @property string $dob
+ * @property integer $user_key
  */
 class UserInfo extends CActiveRecord
 {
