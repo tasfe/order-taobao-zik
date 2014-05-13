@@ -23,8 +23,6 @@
  * @property double $amount_paid
  * @property double $paid
  * @property double $amount_due
- * @property string $file_xls
- * @property string $order_key
  */
 class OrderData extends CActiveRecord
 {
@@ -47,13 +45,13 @@ class OrderData extends CActiveRecord
 			array('user_order_id', 'required'),
 			array('price_cn, price_vn, price_total, price_service, price_ship_vn, price_surcharge, amount_paid, paid, amount_due', 'numerical'),
 			array('user_order_id', 'length', 'max'=>20),
-			array('shop_name,file_xls', 'length', 'max'=>300),
+			array('shop_name', 'length', 'max'=>300),
 			array('size_p, color_p', 'length', 'max'=>100),
 			array('quantity, status_p', 'length', 'max'=>50),
 			array('link_p, image_p, user_note', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('order_id,order_key, user_order_id, shop_name, link_p, image_p, size_p, color_p, quantity, price_cn, price_vn, price_total, status_p, user_note, price_service, price_ship_vn, price_surcharge, amount_paid, paid, amount_due', 'safe', 'on'=>'search'),
+			array('order_id, user_order_id, shop_name, link_p, image_p, size_p, color_p, quantity, price_cn, price_vn, price_total, status_p, user_note, price_service, price_ship_vn, price_surcharge, amount_paid, paid, amount_due', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -149,22 +147,4 @@ class OrderData extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-
-    public static function getStatus($status){
-        switch($status){
-            case '1':
-                echo '<span class="label label-warning">Đang duyệt...</span>';
-                break;
-            case '2':
-                echo '<span class="label label-success">Đã được duyệt</span>';
-                break;
-            case '3':
-                echo '<span class="label label-info">Đang về Việt Nam</span>';
-                break;
-            case '4':
-                echo '<span class="label label-important">Bị hủy</span>';
-                break;
-
-        }
-    }
 }
