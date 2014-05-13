@@ -24,6 +24,7 @@
  * @property double $paid
  * @property double $amount_due
  * @property string $file_xls
+ * @property string $order_key
  */
 class OrderData extends CActiveRecord
 {
@@ -52,7 +53,7 @@ class OrderData extends CActiveRecord
 			array('link_p, image_p, user_note', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('order_id, user_order_id, shop_name, link_p, image_p, size_p, color_p, quantity, price_cn, price_vn, price_total, status_p, user_note, price_service, price_ship_vn, price_surcharge, amount_paid, paid, amount_due', 'safe', 'on'=>'search'),
+			array('order_id,order_key, user_order_id, shop_name, link_p, image_p, size_p, color_p, quantity, price_cn, price_vn, price_total, status_p, user_note, price_service, price_ship_vn, price_surcharge, amount_paid, paid, amount_due', 'safe', 'on'=>'search'),
 		);
 	}
 

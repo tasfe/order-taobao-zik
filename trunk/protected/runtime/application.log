@@ -2720,3 +2720,868 @@ Stack trace:
 REQUEST_URI=/orders/index.php?r=site/login
 HTTP_REFERER=http://localhost/orders/index.php?r=site/login
 ---
+2014/05/09 09:33:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(270): CController->missingAction('view')
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): CController->run('view')
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController('site/view')
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CApplication->run()
+#5 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CComponent->__call('runEnd', Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd('front')
+#9 {main}
+REQUEST_URI=/orders/index.php?r=site/view&id=1
+HTTP_REFERER=http://localhost/orders/index.php
+---
+2014/05/09 09:37:09 [error] [exception.CException] exception 'CException' with message 'OrderController contains improperly nested widget tags in its view "/Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/layouts/column2.php". A CContentDecorator widget does not have an endWidget() call.' in /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CBaseController.php:101
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(784): CBaseController->renderFile('/Applications/X...', Array, true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(46): CController->render('order', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionIndex()
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): CController->run('')
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController('order/')
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#11 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CComponent->__call('runEnd', Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd('front')
+#14 {main}
+REQUEST_URI=/orders/index.php?r=order/
+---
+2014/05/09 10:26:29 [error] [php] Undefined index: OrderData (/Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php:57)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): OrderController->runAction()
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): OrderController->runActionWithFilters()
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): OrderController->run()
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array()
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->__call()
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/orders/index.php?r=order/createAjax
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (57)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/index.php (11)
+2014/05/10 11:11:04 [error] [exception.Exception] exception 'Exception' with message 'The filename /Applications/XAMPP/xamppfiles/temp/phpiKSgRC is not recognised as an OLE file' in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Shared/OLERead.php:80
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Reader/Excel5.php(928): PHPExcel_Shared_OLERead->read('/Applications/X...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Reader/Excel5.php(498): PHPExcel_Reader_Excel5->_loadOLE('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/ExcelReader.php(19): PHPExcel_Reader_Excel5->load('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(62): ExcelReader->loadData('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): CController->run('createAjax')
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController('order/createAja...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CApplication->run()
+#12 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#14 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CComponent->__call('runEnd', Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd('front')
+#16 {main}
+REQUEST_URI=/orders/index.php?r=order/createAjax
+HTTP_REFERER=http://localhost/orders/
+---
+2014/05/10 11:11:34 [error] [exception.Exception] exception 'Exception' with message 'The filename /Applications/XAMPP/xamppfiles/temp/phpHZeut5 is not recognised as an OLE file' in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Shared/OLERead.php:80
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Reader/Excel5.php(928): PHPExcel_Shared_OLERead->read('/Applications/X...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Reader/Excel5.php(498): PHPExcel_Reader_Excel5->_loadOLE('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/ExcelReader.php(19): PHPExcel_Reader_Excel5->load('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(62): ExcelReader->loadData('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): CController->run('createAjax')
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController('order/createAja...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CApplication->run()
+#12 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#14 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CComponent->__call('runEnd', Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd('front')
+#16 {main}
+REQUEST_URI=/orders/index.php?r=order/createAjax
+HTTP_REFERER=http://localhost/orders/
+---
+2014/05/10 11:12:06 [error] [exception.Exception] exception 'Exception' with message 'The filename /Applications/XAMPP/xamppfiles/temp/phpLDECAM is not recognised as an OLE file' in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Shared/OLERead.php:80
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Reader/Excel5.php(928): PHPExcel_Shared_OLERead->read('/Applications/X...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Reader/Excel5.php(498): PHPExcel_Reader_Excel5->_loadOLE('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/ExcelReader.php(19): PHPExcel_Reader_Excel5->load('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(62): ExcelReader->loadData('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): CController->run('createAjax')
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController('order/createAja...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CApplication->run()
+#12 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#14 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CComponent->__call('runEnd', Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd('front')
+#16 {main}
+REQUEST_URI=/orders/index.php?r=order/createAjax
+HTTP_REFERER=http://localhost/orders/
+---
+2014/05/10 11:17:29 [error] [exception.Exception] exception 'Exception' with message 'Could not open banner.xlsx for reading! File does not exist, or it is not readable.' in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Shared/OLERead.php:72
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Reader/Excel5.php(928): PHPExcel_Shared_OLERead->read('banner.xlsx')
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Reader/Excel5.php(498): PHPExcel_Reader_Excel5->_loadOLE('banner.xlsx')
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/ExcelReader.php(19): PHPExcel_Reader_Excel5->load('banner.xlsx')
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(62): ExcelReader->loadData('banner.xlsx')
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): CController->run('createAjax')
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController('order/createAja...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CApplication->run()
+#12 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#14 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CComponent->__call('runEnd', Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd('front')
+#16 {main}
+REQUEST_URI=/orders/index.php?r=order/createAjax
+HTTP_REFERER=http://localhost/orders/index.php?r=order/
+---
+2014/05/10 11:18:43 [error] [exception.Exception] exception 'Exception' with message 'Could not open banner.xlsx for reading! File does not exist, or it is not readable.' in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Shared/OLERead.php:72
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Reader/Excel5.php(928): PHPExcel_Shared_OLERead->read('banner.xlsx')
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Reader/Excel5.php(498): PHPExcel_Reader_Excel5->_loadOLE('banner.xlsx')
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/ExcelReader.php(19): PHPExcel_Reader_Excel5->load('banner.xlsx')
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(62): ExcelReader->loadData('banner.xlsx')
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): CController->run('createAjax')
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController('order/createAja...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CApplication->run()
+#12 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#14 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CComponent->__call('runEnd', Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd('front')
+#16 {main}
+REQUEST_URI=/orders/index.php?r=order/createAjax
+HTTP_REFERER=http://localhost/orders/index.php?r=order/
+---
+2014/05/10 11:18:50 [error] [exception.Exception] exception 'Exception' with message 'Could not open banner.xlsx for reading! File does not exist, or it is not readable.' in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Shared/OLERead.php:72
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Reader/Excel5.php(928): PHPExcel_Shared_OLERead->read('banner.xlsx')
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Reader/Excel5.php(498): PHPExcel_Reader_Excel5->_loadOLE('banner.xlsx')
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/ExcelReader.php(19): PHPExcel_Reader_Excel5->load('banner.xlsx')
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(62): ExcelReader->loadData('banner.xlsx')
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): CController->run('createAjax')
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController('order/createAja...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CApplication->run()
+#12 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#14 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CComponent->__call('runEnd', Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd('front')
+#16 {main}
+REQUEST_URI=/orders/index.php?r=order/createAjax
+HTTP_REFERER=http://localhost/orders/index.php?r=order/
+---
+2014/05/10 11:20:20 [error] [exception.Exception] exception 'Exception' with message 'Could not open banner.xls for reading! File does not exist, or it is not readable.' in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Shared/OLERead.php:72
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Reader/Excel5.php(928): PHPExcel_Shared_OLERead->read('banner.xls')
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Reader/Excel5.php(498): PHPExcel_Reader_Excel5->_loadOLE('banner.xls')
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/ExcelReader.php(19): PHPExcel_Reader_Excel5->load('banner.xls')
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(62): ExcelReader->loadData('banner.xls')
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): CController->run('createAjax')
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController('order/createAja...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CApplication->run()
+#12 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#14 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CComponent->__call('runEnd', Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd('front')
+#16 {main}
+REQUEST_URI=/orders/index.php?r=order/createAjax
+HTTP_REFERER=http://localhost/orders/index.php?r=order/
+---
+2014/05/10 11:20:24 [error] [exception.Exception] exception 'Exception' with message 'Could not open banner.xls for reading! File does not exist, or it is not readable.' in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Shared/OLERead.php:72
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Reader/Excel5.php(928): PHPExcel_Shared_OLERead->read('banner.xls')
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Reader/Excel5.php(498): PHPExcel_Reader_Excel5->_loadOLE('banner.xls')
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/ExcelReader.php(19): PHPExcel_Reader_Excel5->load('banner.xls')
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(62): ExcelReader->loadData('banner.xls')
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): CController->run('createAjax')
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController('order/createAja...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CApplication->run()
+#12 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#14 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CComponent->__call('runEnd', Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd('front')
+#16 {main}
+REQUEST_URI=/orders/index.php?r=order/createAjax
+HTTP_REFERER=http://localhost/orders/index.php?r=order/
+---
+2014/05/10 11:30:06 [error] [exception.Exception] exception 'Exception' with message 'Could not open banner.xls for reading! File does not exist, or it is not readable.' in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Shared/OLERead.php:72
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Reader/Excel5.php(928): PHPExcel_Shared_OLERead->read('banner.xls')
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Reader/Excel5.php(498): PHPExcel_Reader_Excel5->_loadOLE('banner.xls')
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/ExcelReader.php(19): PHPExcel_Reader_Excel5->load('banner.xls')
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(69): ExcelReader->loadData('banner.xls')
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): CController->run('createAjax')
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController('order/createAja...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CApplication->run()
+#12 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#14 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CComponent->__call('runEnd', Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd('front')
+#16 {main}
+REQUEST_URI=/orders/index.php?r=order/createAjax
+HTTP_REFERER=http://localhost/orders/index.php?r=order/
+---
+2014/05/10 11:30:56 [error] [exception.Exception] exception 'Exception' with message 'Could not open banner.xls for reading! File does not exist, or it is not readable.' in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Shared/OLERead.php:72
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Reader/Excel5.php(928): PHPExcel_Shared_OLERead->read('banner.xls')
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Reader/Excel5.php(498): PHPExcel_Reader_Excel5->_loadOLE('banner.xls')
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/ExcelReader.php(19): PHPExcel_Reader_Excel5->load('banner.xls')
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(69): ExcelReader->loadData('banner.xls')
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): CController->run('createAjax')
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController('order/createAja...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CApplication->run()
+#12 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#14 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CComponent->__call('runEnd', Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd('front')
+#16 {main}
+REQUEST_URI=/orders/index.php?r=order/createAjax
+HTTP_REFERER=http://localhost/orders/index.php?r=order/
+---
+2014/05/10 11:31:04 [error] [exception.Exception] exception 'Exception' with message 'Could not open banner.xls for reading! File does not exist, or it is not readable.' in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Shared/OLERead.php:72
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Reader/Excel5.php(928): PHPExcel_Shared_OLERead->read('banner.xls')
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Reader/Excel5.php(498): PHPExcel_Reader_Excel5->_loadOLE('banner.xls')
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/ExcelReader.php(19): PHPExcel_Reader_Excel5->load('banner.xls')
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(69): ExcelReader->loadData('banner.xls')
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): CController->run('createAjax')
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController('order/createAja...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CApplication->run()
+#12 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#14 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CComponent->__call('runEnd', Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd('front')
+#16 {main}
+REQUEST_URI=/orders/index.php?r=order/createAjax
+HTTP_REFERER=http://localhost/orders/index.php?r=order/
+---
+2014/05/10 11:35:57 [error] [exception.Exception] exception 'Exception' with message 'Could not open /Applications/XAMPP/xamppfiles/temp/phpvZZiw5 for reading! File does not exist, or it is not readable.' in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Shared/OLERead.php:72
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Reader/Excel5.php(928): PHPExcel_Shared_OLERead->read('/Applications/X...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Reader/Excel5.php(498): PHPExcel_Reader_Excel5->_loadOLE('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/ExcelReader.php(19): PHPExcel_Reader_Excel5->load('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(69): ExcelReader->loadData('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): CController->run('createAjax')
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController('order/createAja...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CApplication->run()
+#12 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#14 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CComponent->__call('runEnd', Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd('front')
+#16 {main}
+REQUEST_URI=/orders/index.php?r=order/createAjax
+HTTP_REFERER=http://localhost/orders/index.php?r=order/
+---
+2014/05/10 20:55:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] No such file or directory' in /Applications/XAMPP/xamppfiles/htdocs/orders/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(OrderData))
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(55): CActiveRecord->__construct()
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#10 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): CController->run('createAjax')
+#14 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController('order/createAja...')
+#15 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CApplication->run()
+#17 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#18 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CComponent->__call('runEnd', Array)
+#20 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd('front')
+#21 {main}
+REQUEST_URI=/orders/index.php?r=order/createAjax
+HTTP_REFERER=http://localhost/orders/index.php?r=order/
+---
+2014/05/11 17:56:12 [error] [php] Illegal string offset 'value' (/Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Calculation.php:2904)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Cell.php(267): PHPExcel_Calculation->calculateCellValue()
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Worksheet.php(2135): PHPExcel_Cell->getCalculatedValue()
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/ExcelReader.php(20): PHPExcel_Worksheet->toArray()
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(69): ExcelReader->loadData()
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): OrderController->runAction()
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): OrderController->runActionWithFilters()
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): OrderController->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CWebApplication->run()
+#12 unknown(0): WebApplicationEndBehavior->runEnd()
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array()
+#14 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->__call()
+#15 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/orders/index.php?r=order/createAjax
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Calculation.php (2904)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Calculation.php (2251)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/excel/PHPExcel/Calculation.php (2086)
+2014/05/11 18:15:24 [error] [php] Undefined variable: col (/Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php:15)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(869): OrderController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(72): OrderController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): OrderController->runAction()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): OrderController->runActionWithFilters()
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): OrderController->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CWebApplication->run()
+#10 unknown(0): WebApplicationEndBehavior->runEnd()
+#11 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array()
+#12 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->__call()
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/orders/index.php?r=order/createAjax
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php (15)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (72)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+2014/05/11 18:19:58 [error] [php] Undefined variable: col (/Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php:34)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(869): OrderController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(72): OrderController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): OrderController->runAction()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): OrderController->runActionWithFilters()
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): OrderController->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CWebApplication->run()
+#10 unknown(0): WebApplicationEndBehavior->runEnd()
+#11 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array()
+#12 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->__call()
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/orders/index.php?r=order/createAjax
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php (34)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (72)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+2014/05/11 18:28:30 [error] [php] Undefined offset: 0 (/Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php:14)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(869): OrderController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(72): OrderController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): OrderController->runAction()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): OrderController->runActionWithFilters()
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): OrderController->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CWebApplication->run()
+#10 unknown(0): WebApplicationEndBehavior->runEnd()
+#11 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array()
+#12 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->__call()
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/orders/index.php?r=order/createAjax
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php (14)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (72)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+2014/05/11 18:29:07 [error] [php] Undefined offset: 0 (/Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php:15)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(869): OrderController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(72): OrderController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): OrderController->runAction()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): OrderController->runActionWithFilters()
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): OrderController->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CWebApplication->run()
+#10 unknown(0): WebApplicationEndBehavior->runEnd()
+#11 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array()
+#12 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->__call()
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/orders/index.php?r=order/createAjax
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php (15)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (72)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+2014/05/11 18:29:44 [error] [php] Array to string conversion (/Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php:15)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(869): OrderController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(72): OrderController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): OrderController->runAction()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): OrderController->runActionWithFilters()
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): OrderController->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CWebApplication->run()
+#10 unknown(0): WebApplicationEndBehavior->runEnd()
+#11 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array()
+#12 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->__call()
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/orders/index.php?r=order/createAjax
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php (15)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (72)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+2014/05/11 18:36:41 [error] [php] Invalid argument supplied for foreach() (/Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php:15)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(869): OrderController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(72): OrderController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): OrderController->runAction()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): OrderController->runActionWithFilters()
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): OrderController->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CWebApplication->run()
+#10 unknown(0): WebApplicationEndBehavior->runEnd()
+#11 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array()
+#12 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->__call()
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/orders/index.php?r=order/createAjax
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php (15)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (72)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+2014/05/11 18:40:24 [error] [php] Use of undefined constant count - assumed 'count' (/Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php:15)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(869): OrderController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(72): OrderController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): OrderController->runAction()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): OrderController->runActionWithFilters()
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): OrderController->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CWebApplication->run()
+#10 unknown(0): WebApplicationEndBehavior->runEnd()
+#11 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array()
+#12 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->__call()
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/orders/index.php?r=order/createAjax
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php (15)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (72)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+2014/05/11 18:42:19 [error] [php] Undefined offset: 8 (/Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php:18)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(869): OrderController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(72): OrderController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): OrderController->runAction()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): OrderController->runActionWithFilters()
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): OrderController->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CWebApplication->run()
+#10 unknown(0): WebApplicationEndBehavior->runEnd()
+#11 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array()
+#12 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->__call()
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/orders/index.php?r=order/createAjax
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php (18)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (72)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+2014/05/11 18:42:44 [error] [php] Invalid argument supplied for foreach() (/Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php:21)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(869): OrderController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(72): OrderController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): OrderController->runAction()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): OrderController->runActionWithFilters()
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): OrderController->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CWebApplication->run()
+#10 unknown(0): WebApplicationEndBehavior->runEnd()
+#11 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array()
+#12 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->__call()
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/orders/index.php?r=order/createAjax
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php (21)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (72)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+2014/05/11 23:57:44 [warning] [application] Failed to set unsafe attribute "order_at" of "OrderData".
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/SiteController.php (40)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/index.php (11)
+2014/05/11 23:57:44 [warning] [application] Failed to set unsafe attribute "status_order" of "OrderData".
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/SiteController.php (40)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/index.php (11)
+2014/05/11 23:57:46 [warning] [application] Failed to set unsafe attribute "order_at" of "OrderData".
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/SiteController.php (40)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/index.php (11)
+2014/05/11 23:57:46 [warning] [application] Failed to set unsafe attribute "status_order" of "OrderData".
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/SiteController.php (40)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/index.php (11)
+2014/05/11 23:57:50 [warning] [application] Failed to set unsafe attribute "order_at" of "OrderData".
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/SiteController.php (40)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/index.php (11)
+2014/05/11 23:57:50 [warning] [application] Failed to set unsafe attribute "status_order" of "OrderData".
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/SiteController.php (40)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/index.php (11)
+2014/05/11 23:57:51 [warning] [application] Failed to set unsafe attribute "order_at" of "OrderData".
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/SiteController.php (40)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/index.php (11)
+2014/05/11 23:57:51 [warning] [application] Failed to set unsafe attribute "status_order" of "OrderData".
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/SiteController.php (40)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/index.php (11)
+2014/05/11 23:57:56 [warning] [application] Failed to set unsafe attribute "order_at" of "OrderData".
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/SiteController.php (40)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/index.php (11)
+2014/05/11 23:57:56 [warning] [application] Failed to set unsafe attribute "status_order" of "OrderData".
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/SiteController.php (40)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/index.php (11)
+2014/05/11 23:58:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(270): CController->missingAction('view')
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): CController->run('view')
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController('site/view')
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CApplication->run()
+#5 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CComponent->__call('runEnd', Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd('front')
+#9 {main}
+REQUEST_URI=/orders/index.php?r=site/view&id=1
+HTTP_REFERER=http://localhost/orders/
+---
+2014/05/12 14:25:27 [error] [php] Undefined offset: 5 (/Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php:84)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): OrderController->runAction()
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): OrderController->runActionWithFilters()
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): OrderController->run()
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array()
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->__call()
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/orders/index.php?r=order/createAjax
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (84)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/index.php (11)
+2014/05/12 14:26:25 [error] [php] Undefined offset: 5 (/Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php:80)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): OrderController->runAction()
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): OrderController->runActionWithFilters()
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): OrderController->run()
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array()
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->__call()
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/orders/index.php?r=order/createAjax
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (80)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/index.php (11)
+2014/05/12 14:44:13 [error] [exception.CException] exception 'CException' with message 'Property "User.id" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/db/ar/CActiveRecord.php(145): CComponent->__get('id')
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/UserIdentity.php(29): CActiveRecord->__get('id')
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/SiteController.php(111): CModel->validate()
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): CController->run('login')
+#12 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CApplication->run()
+#15 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#16 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CComponent->__call('runEnd', Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd('front')
+#19 {main}
+REQUEST_URI=/orders/index.php?r=site/login
+HTTP_REFERER=http://localhost/orders/index.php?r=site/login
+---
+2014/05/12 15:37:12 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '20140512153712' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `tbl_order_data` (`user_order_id`, `order_id`, `link_p`, `image_p`, `size_p`, `color_p`, `quantity`, `user_note`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (101)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/index.php (11)
+2014/05/12 15:37:50 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '20140512153750' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `tbl_order_data` (`user_order_id`, `order_id`, `link_p`, `image_p`, `size_p`, `color_p`, `quantity`, `user_note`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (101)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/index.php (11)
+2014/05/12 15:40:47 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '20140512154047' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `tbl_order_data` (`user_order_id`, `order_id`, `link_p`, `image_p`, `size_p`, `color_p`, `quantity`, `user_note`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (102)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/index.php (11)
+2014/05/12 15:45:26 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '20140512154526' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `tbl_order_data` (`user_order_id`, `order_id`, `link_p`, `image_p`, `size_p`, `color_p`, `quantity`, `user_note`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (106)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/index.php (11)
+2014/05/12 15:45:57 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '20140512154557' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `tbl_order_data` (`user_order_id`, `order_id`, `link_p`, `image_p`, `size_p`, `color_p`, `quantity`, `user_note`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (108)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/index.php (11)
+2014/05/12 15:47:10 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '20140512154710' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `tbl_order_data` (`user_order_id`, `order_id`, `link_p`, `image_p`, `size_p`, `color_p`, `quantity`, `user_note`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (108)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/index.php (11)
+2014/05/12 15:47:49 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '20140512154749' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `tbl_order_data` (`user_order_id`, `order_id`, `link_p`, `image_p`, `size_p`, `color_p`, `quantity`, `user_note`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (108)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/index.php (11)
+2014/05/12 15:51:09 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '20140512155109' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `tbl_order_data` (`user_order_id`, `order_id`, `link_p`, `image_p`, `size_p`, `color_p`, `quantity`, `user_note`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (109)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/index.php (11)
+2014/05/12 15:55:23 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '20140512155523' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `tbl_order_data` (`user_order_id`, `order_id`, `link_p`, `image_p`, `size_p`, `color_p`, `quantity`, `user_note`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (109)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/index.php (11)
+2014/05/12 15:58:57 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '20140512155857' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `tbl_order_data` (`user_order_id`, `order_id`, `link_p`, `image_p`, `size_p`, `color_p`, `quantity`, `user_note`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (111)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/index.php (11)
+2014/05/12 16:00:54 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '20140512160054' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `tbl_order_data` (`user_order_id`, `order_id`, `link_p`, `image_p`, `size_p`, `color_p`, `quantity`, `user_note`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (111)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/index.php (11)
+2014/05/12 16:02:47 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '20140512160247' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `tbl_order_data` (`user_order_id`, `order_id`, `link_p`, `image_p`, `size_p`, `color_p`, `quantity`, `user_note`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (106)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/index.php (11)
+2014/05/12 16:04:35 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '20140512160435' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `tbl_order_data` (`user_order_id`, `order_id`, `link_p`, `image_p`, `size_p`, `color_p`, `quantity`, `user_note`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (106)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/index.php (11)
+2014/05/12 16:06:46 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '20140512160646' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `tbl_order_data` (`user_order_id`, `order_id`, `link_p`, `image_p`, `size_p`, `color_p`, `quantity`, `user_note`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (107)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/index.php (11)
+2014/05/12 17:08:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "update".' in /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(270): CController->missingAction('update')
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): CController->run('update')
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController('site/update')
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CApplication->run()
+#5 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CComponent->__call('runEnd', Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd('front')
+#9 {main}
+REQUEST_URI=/orders/index.php?r=site/update&id=77
+HTTP_REFERER=http://localhost/orders/
+---
+2014/05/12 22:13:57 [error] [php] Undefined variable: model (/Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php:82)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(869): OrderController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(167): OrderController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(135): OrderController->getDataOrder()
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): OrderController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): OrderController->runActionWithFilters()
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): OrderController->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CWebApplication->run()
+#11 unknown(0): WebApplicationEndBehavior->runEnd()
+#12 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array()
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->__call()
+#14 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/orders/index.php?r=order/createAjax
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php (82)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (167)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (135)
+2014/05/12 22:14:00 [error] [php] Undefined variable: model (/Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php:82)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(869): OrderController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(167): OrderController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(135): OrderController->getDataOrder()
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): OrderController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): OrderController->runActionWithFilters()
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): OrderController->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CWebApplication->run()
+#11 unknown(0): WebApplicationEndBehavior->runEnd()
+#12 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array()
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->__call()
+#14 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/orders/index.php?r=order/createAjax
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php (82)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (167)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (135)
+2014/05/12 23:04:33 [error] [php] Undefined variable: data (/Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php:25)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(869): OrderController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(181): OrderController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(135): OrderController->getDataOrder()
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): OrderController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): OrderController->runActionWithFilters()
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): OrderController->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CWebApplication->run()
+#11 unknown(0): WebApplicationEndBehavior->runEnd()
+#12 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array()
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->__call()
+#14 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/orders/index.php?r=order/createAjax
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php (25)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (181)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (135)
+2014/05/12 23:28:29 [error] [php] Undefined variable: model (/Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php:82)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(869): OrderController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(180): OrderController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(135): OrderController->getDataOrder()
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): OrderController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): OrderController->runActionWithFilters()
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): OrderController->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CWebApplication->run()
+#11 unknown(0): WebApplicationEndBehavior->runEnd()
+#12 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array()
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->__call()
+#14 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/orders/index.php?r=order/createAjax
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php (82)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (180)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (135)
+2014/05/13 00:15:26 [error] [php] Undefined variable: data (/Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php:81)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(869): OrderController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(189): OrderController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(135): OrderController->getDataOrder()
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): OrderController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): OrderController->runActionWithFilters()
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): OrderController->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CWebApplication->run()
+#11 unknown(0): WebApplicationEndBehavior->runEnd()
+#12 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array()
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->__call()
+#14 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/orders/index.php?r=order/createAjax
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php (81)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (189)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (135)
+2014/05/13 00:47:23 [error] [php] Trying to get property of non-object (/Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(612) : eval()'d code:1)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/zii/widgets/grid/CButtonColumn.php(319): TbButtonColumn->renderButton()
+#1 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/zii/widgets/grid/CGridColumn.php(151): TbButtonColumn->renderDataCellContent()
+#2 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/zii/widgets/grid/CGridView.php(616): TbButtonColumn->renderDataCell()
+#3 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/zii/widgets/grid/CGridView.php(572): TbGridView->renderTableRow()
+#4 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/zii/widgets/grid/CGridView.php(482): TbGridView->renderTableBody()
+#5 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/zii/widgets/CBaseListView.php(167): TbGridView->renderItems()
+#6 unknown(0): TbGridView->renderSection()
+#7 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/zii/widgets/CBaseListView.php(150): preg_replace_callback()
+#8 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/zii/widgets/CBaseListView.php(135): TbGridView->renderContent()
+#9 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CBaseController.php(173): TbGridView->run()
+#10 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php(103): OrderController->widget()
+#11 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CBaseController.php(126): require()
+#12 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CBaseController.php(95): OrderController->renderInternal()
+#13 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(869): OrderController->renderFile()
+#14 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(194): OrderController->renderPartial()
+#15 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php(135): OrderController->getDataOrder()
+#16 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/actions/CInlineAction.php(49): OrderController->actionCreateAjax()
+#17 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(308): CInlineAction->runWithParams()
+#18 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(286): OrderController->runAction()
+#19 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CController.php(265): OrderController->runActionWithFilters()
+#20 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(282): OrderController->run()
+#21 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#22 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#23 /Applications/XAMPP/xamppfiles/htdocs/orders/protected/components/WebApplicationEndBehavior.php(32): CWebApplication->run()
+#24 unknown(0): WebApplicationEndBehavior->runEnd()
+#25 /Applications/XAMPP/xamppfiles/htdocs/orders/framework/base/CComponent.php(261): call_user_func_array()
+#26 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->__call()
+#27 /Applications/XAMPP/xamppfiles/htdocs/orders/index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/orders/index.php?r=order/createAjax
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/extensions/bootstrap/widgets/TbButtonColumn.php (78)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/views/front/partial/_render_table.php (103)
+in /Applications/XAMPP/xamppfiles/htdocs/orders/protected/controllers/front/OrderController.php (194)
