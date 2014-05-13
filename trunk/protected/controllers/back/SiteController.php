@@ -1,6 +1,6 @@
 <?php
 
-class SiteController extends BackEndController
+class SiteController extends Controller
 {
 	/**
 	 * Declares class-based actions.
@@ -27,6 +27,8 @@ class SiteController extends BackEndController
 	 */
 	public function actionIndex()
 	{
+//        var_dump(Yii::app()->db);
+//        die();
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
 		$this->render('index');
@@ -80,11 +82,11 @@ class SiteController extends BackEndController
 		$model=new LoginForm;
 
 		// if it is ajax validation request
-		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
-		}
+//		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
+//		{
+//			echo CActiveForm::validate($model);
+//			Yii::app()->end();
+//		}
 
 		// collect user input data
 		if(isset($_POST['LoginForm']))
@@ -106,4 +108,19 @@ class SiteController extends BackEndController
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
+
+    public function actionRegister(){
+        $model = new RegForm();
+
+        if(isset($_POST['RegForm'])){
+            $model->attributes=$_POST['RegForm'];
+            if($model->validate() && $model->save()){
+                $this->redirect(array(
+                   'site/login'
+                ));
+            }
+        }
+        $this->render('register',array('model_reg'=>$model));
+
+    }
 }

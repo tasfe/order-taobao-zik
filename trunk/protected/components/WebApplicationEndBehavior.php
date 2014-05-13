@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: zikoops
  * Date: 01/05/2014
- * Time: 23:25
+ * Time: 17:37
  */
 
 class WebApplicationEndBehavior extends CBehavior
@@ -45,5 +45,13 @@ class WebApplicationEndBehavior extends CBehavior
     {
         $event->sender->controllerPath .= DIRECTORY_SEPARATOR.$this->_endName;
         $event->sender->viewPath .= DIRECTORY_SEPARATOR.$this->_endName;
+    }
+    public function init(){
+        // We can configure our module depending on the value
+        // of Yii::app()->endName.
+        $this->foo = (Yii::app()->endName == 'front') ? 'bar1' : 'bar2';
+
+        // Raise onModuleCreate event.
+        Yii::app()->onModuleCreate(new CEvent($this));
     }
 }

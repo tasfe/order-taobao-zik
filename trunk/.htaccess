@@ -5,7 +5,7 @@ IndexIgnore */*
 RewriteEngine on
 
 # Make the backend accessible via url: http://site/backend.
-RewriteRule ^backend backend.php
+RewriteRule ^backend back.php
 
 # If a directory or a file exists, use it directly.
 RewriteCond %{REQUEST_FILENAME} !-f
